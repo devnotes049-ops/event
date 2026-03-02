@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">EVENTS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html" class="active">Explore Events</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-btn">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                </li>
+                <li><a href="#" class="btn-primary">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container explore-container">
+        <aside class="filter-sidebar">
+            <p>Filter</p>
+
+            <div class="filter-group">
+                <h4>Category</h4>
+                <label><input type="checkbox"> Web Development</label>
+                <label><input type="checkbox"> Mobile Development</label>
+                <label><input type="checkbox"> UI/UX Design</label>
+                <label><input type="checkbox"> Machine Learning</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Event Type</h4>
+                <label><input type="radio" name="type"> Online</label>
+                <label><input type="radio" name="type"> Offline</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price</h4>
+                <label><input type="checkbox"> Free</label>
+                <label><input type="checkbox"> Paid</label>
+            </div>
+
+            <button class="btn-apply">Apply Filter</button>
+        </aside>
+
+        <main class="explore-main">
+            <div class="explore-search-wrapper">
+                <div class="search-input-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="exploreSearch" placeholder="Search event title, mentor, or technology...">
+                </div>
+                <!-- <button class="btn-search-explore">Search Event</button> -->
+            </div>
+        
+            <div class="explore-header">
+                <div class="result-info">
+                    <h2>All Events</h2>
+                    <h5>Showing 8 of 32 Events</h5>
+                </div>
+                <div class="sort-wrapper">
+                    <span class="change-color"> Sort by:</span>
+                    <select class="sort-select">
+                        <option>Newest</option>
+                        <option>A-Z</option>
+                        <option>Lowest Price</option>
+                        <option>Highest Price</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="event-grid">
+                <div class="event-card">
+                    <img src="https://placehold.co/600x400/4f46e5/white?text=NextJS+14" alt="Event">
+                    <div class="event-content">
+                        <span class="badge">Web Dev</span>
+                        <p>Next.js 14 Deep Dive</p>
+                        <p class="date">📅 12 May 2024</p>
+                        <p class="price">Rp 250.000</p>
+                       <a href="detail.html" class="btn-outline-link">Event Details</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://placehold.co/600x400/0891b2/white?text=Tailwind+CSS" alt="Event">
+                    <div class="event-content">
+                        <span class="badge">Frontend</span>
+                        <p>Modern UI with Tailwind</p>
+                        <p class="date">📅 15 May 2024</p>
+                        <p class="price">Free</p>
+                       <a href="detail.html" class="btn-outline-link">Event Details</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://placehold.co/600x400/7c3aed/white?text=Python+Data" alt="Event">
+                    <div class="event-content">
+                        <span class="badge">Data Science</span>
+                        <p>Python for Beginner</p>
+                        <p class="date">📅 20 May 2024</p>
+                        <p class="price">Rp 500.000</p>
+                       <a href="detail.html" class="btn-outline-link">Event Details</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://placehold.co/600x400/db2777/white?text=Figma+UI" alt="Event">
+                    <div class="event-content">
+                        <span class="badge">UI/UX</span>
+                        <p>Figma Prototyping</p>
+                        <p class="date">📅 22 May 2024</p>
+                        <p class="price">Rp 150.000</p>
+                       <a href="detail.html" class="btn-outline-link">Event Details</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://placehold.co/600x400/ea580c/white?text=Laravel+11" alt="Event">
+                    <div class="event-content">
+                        <span class="badge">Backend</span>
+                        <p>Laravel 11 New Features</p>
+                        <p class="date">📅 01 June 2024</p>
+                        <p class="price">Rp 300.000</p>
+                       <a href="detail.html" class="btn-outline-link">Event Details</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://placehold.co/600x400/16a34a/white?text=NodeJS+API" alt="Event">
+                    <div class="event-content">
+                        <span class="badge">Backend</span>
+                        <p>NodeJS Express API</p>
+                        <p class="date">📅 05 June 2024</p>
+                        <p class="price">Free</p>
+                       <a href="detail.html" class="btn-outline-link">Event Details</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://placehold.co/600x400/2563eb/white?text=React+Native" alt="Event">
+                    <div class="event-content">
+                        <span class="badge">Mobile</span>
+                        <p>React Native Hybrid App</p>
+                        <p class="date">📅 10 June 2024</p>
+                        <p class="price">Rp 450.000</p>
+                       <a href="detail.html" class="btn-outline-link">Event Details</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://placehold.co/600x400/4b5563/white?text=Git+GitHub" alt="Event">
+                    <div class="event-content">
+                        <span class="badge">DevOps</span>
+                        <p>Git & GitHub Workflow</p>
+                        <p class="date">📅 12 June 2024</p>
+                        <p class="price">Gratis</p>
+                       <a href="detail.html" class="btn-outline-link">Event Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination-wrapper">
+                <ul class="pagination-list">
+                    <li><button class="page-nav">«</button></li>
+                    <li><button class="page-num active">1</button></li>
+                    <li><button class="page-num">2</button></li>
+                    <li><button class="page-num">3</button></li>
+                    <li><button class="page-num">4</button></li>
+                    <li><button class="page-nav">»</button></li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+<script src="js/script.js"></script>
+
+</html>

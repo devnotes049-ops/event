@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">EVENTS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore Events</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-btn">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                </li>
+                <li><a href="#" class="btn-primary">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container detail-container">
+        <div class="detail-main">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> / <a href="explore.html">Events</a> / <span>JavaScript Summit</span>
+            </nav>
+
+            <img src="https://placehold.co/1200x600/312e81/white?text=JavaScript+Summit+2024" alt="Banner Event"
+                class="main-banner">
+
+            <div class="detail-header">
+                <span class="badge">Conference</span><br/>
+                <span class="change-color title-event">JavaScript Summit 2024: The Future of Ecosystem</span>
+                <div class="meta-info">
+                    <span>📅 25 May 2024</span>
+                    <span>📍 Online via Zoom</span>
+                    <span>👤 1.2k Registered Participants</span>
+                </div>
+            </div>
+
+            <section class="description">
+                <h2>About the Event</h2>
+                <p class="change-color">Join the biggest JavaScript conference of the year. We'll discuss the latest developments in the JavaScript ecosystem, from **Bun runtime**, **Next.js 14 server actions**, to the future of **TypeScript**.</p>
+                <p class="change-color">This event is designed for developers of all levels, from beginners to professionals looking to update their knowledge about current industry trends.</p>
+
+                <h3 class="change-color">What You'll Learn</h3>
+                <ul>
+                    <li class="change-color">Optimize React application performance with the latest compiler.</li>
+                    <li class="change-color">Implement AI in JavaScript-based web applications.</li>
+                    <li class="change-color">Modern state management without heavy external libraries.</li>
+                </ul>
+            </section>
+
+            <section class="speakers">
+                <h2>Main Speakers</h2>
+                <div class="speaker-grid">
+                    <div class="speaker-card">
+                        <img src="https://placehold.co/100x100/6366f1/white?text=SP" alt="Speaker">
+                        <div>
+                            <h4>Mr. Alex</h4>
+                            <p>Content Creator & Lecturer</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <img src="https://placehold.co/100x100/4f46e5/white?text=SP" alt="Speaker">
+                        <div>
+                            <h4>Mr. John</h4>
+                            <p>Technical Architect</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="detail-sidebar">
+            <div class="countdown-container">
+                <p class="countdown-title">Registration Ends In:</p>
+                <div id="timer" class="timer-grid">
+                    <div class="timer-box">
+                        <span id="days">00</span>
+                        <small>Day</small>
+                    </div>
+                    <div class="timer-box">
+                        <span id="hours">00</span>
+                        <small>Hour</small>
+                    </div>
+                    <div class="timer-box">
+                        <span id="minutes">00</span>
+                        <small>Minute</small>
+                    </div>
+                    <div class="timer-box">
+                        <span id="seconds">00</span>
+                        <small>Second</small>
+                    </div>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="booking-card">
+                <div class="price-section">
+                    <p class="label">Ticket Price</p>
+                    <h2 class="price">Rp 250.000</h2>
+                </div>
+
+                <div class="benefit-list">
+                    <div class="benefit-item">✅ Official E-Certificate</div>
+                    <div class="benefit-item">✅ Recording Session (Lifetime)</div>
+                    <div class="benefit-item">✅ Source Code Projects</div>
+                    <div class="benefit-item">✅ Exclusive Community</div>
+                </div>
+
+                <button class="btn-checkout">Register Now</button>
+                <p class="note">*Registration closes in 3 days</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    // Set tanggal tujuan (Contoh: 3 hari dari sekarang)
+    const countDownDate = new Date().getTime() + (3 * 24 * 60 * 60 * 1000);
+
+    const x = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "PENDAFTARAN DITUTUP";
+        }
+    }, 1000);
+</script>
+<script src="js/script.js"></script>
+
+</html>
